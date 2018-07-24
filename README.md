@@ -184,7 +184,6 @@ with the following command:
 ```
 ds = read_dataset( "name" )
 ```
-.
 
 Once the data is in main memory, the code supplied can process it.
 
