@@ -3,27 +3,29 @@
 ## Authors
 
 * Gregorio Quintana-Orti,
-  Depto. de Ingenieria y Ciencia de Computadores,
+  Depto. de Ingeniería y Ciencia de Computadores,
   Universitat Jaume I,
   12.071 Castellon, Spain.
 
 * Amelia Simo,
-  Depto. de Matematicas,
+  Depto. de Matemáticas,
   Universitat Jaume I,
   12.071 Castellon, Spain.
 
 ## Correspondence
 
 Please send correspondence about the code to 
-Gregorio Quintana-Ortí: <gquintan@uji.es>
+Gregorio Quintana-Ortí: <gquintan@icc.uji.es>
 
 Please send correspondence about the paper to
-Amelia Simo: <simo@uji.es>
+Amelia Simó: <simo@mat.uji.es>
 
 ## License
 
+<!---
 (( New 3-clause BSD. ))
 (( See file License.txt for more details. ))
+-->
 
 Free for non-commercial purposes.
 
@@ -44,6 +46,7 @@ We will appreciate feedback from the community on the use of this code.
 ## Citing this work
 
 We ask those who benefit from this work to cite the following article:
+<!---
 
 ```
 @ARTICLE{(( To be fixed )),
@@ -60,29 +63,34 @@ archivePrefix = "arXiv",
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 ```
+-->
 
 ## Details of the code
 
-We offer two variants of the code to compute the kernel regression:
+We offer two variants of the main code to compute the kernel regression
+of a 3D shape in the shape space:
 
 * Basic code:
   It is written in the R programming language.
   It requires the `mvtnorm` R package.
 
 * Accelerated code:
-  It is written in the R programming language and the C programming language.
+  It is written in both the R and the C programming languages.
+  This code uses R code and also some C code to accelerate the most 
+  compute-intensive part of the process.
   It requires the `mvtnorm` R package and a high-performance `BLAS`
-  (Basic Linear Algebra Subroutines) library (it is usually included in 
-  the R programming frameworks).
+  (Basic Linear Algebra Subroutines) library, 
+  which is usually included in the R programming frameworks.
 
 In both cases, the `scatterplot3d`, `shapes`, and `rgl` R packages can be very 
 useful to visualize the obtained shapes.
 
-Both variants can be found in the `mdl_kernel_regression_in_shape_space.E` file.
+Both variants can be found in the `mdl_kernel_regression_in_shape_space.R` file.
 
-### Details of the code writtten in the R programming language:
+### Details of the basic code:
 
-The code supplied contains the following main method:
+The header of the main method that implements the kernel regression
+of the basic code is the following one:
 
 ```
 # =============================================================================
@@ -103,7 +111,8 @@ compute_kernel_regression_of_varset =
 
 ### Details of the accelerated code:
 
-The code supplied contains the following main method:
+The header of the main method that implements the kernel regression
+of the accelerated code is the following one:
 
 ```
 # =============================================================================
@@ -126,9 +135,25 @@ accel_compute_kernel_regression_of_varset =
 #
 ```
 
+To be able to use this accelerated code, you must do the following:
+
+The C code is embedded by using the `.Call` interface.
+
+1. Go to the `C_codes` directory.
+2. Clean the directory with the `cleanDirectory` command.
+3. Compile it with the `c` or the `compile` command.
+   These are just scripts that compile the code 
+   with the `R CMD SHLIB` command. 
+4. Copy the `compute_shape_in_C.so` file (a dynamic library) 
+   to the directory containing the R source code.
+5. Open the R framework.
+6. Load the compiled C code (the dynamic library) 
+   with the `dyn.load( "compute_shape_in_C.so" )` command.
+
 ### Details of the dataset format
 
-A method to load (read) a dataset from storage is supplied.
+A method to load (read) a dataset 
+from secondary storage (two files) is supplied.
 The dataset must be stored in two files:
 
 * `name_coor.csv`: File containing coordinates.
@@ -144,7 +169,13 @@ The dataset must be stored in two files:
   Since the number of columns in this file is usually small, 
   this file requires a header line.
 
-Both files must be stored in the `Data` folder.
+Both files must be stored in the `Data` directory.
+
+If those two files are stored in the `Data` directory, 
+the data can be loaded into memory with the following command:
+`ds = read_dataset( "name" )`.
+
+Once the data is in main memory, the code supplied can process it.
 
 As an example, we show the two files that describe a very basic 
 dataset con two objects: two tetrahedrons.
