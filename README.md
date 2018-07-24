@@ -46,6 +46,9 @@ We will appreciate feedback from the community on the use of this code.
 ## Citing this work
 
 We ask those who benefit from this work to cite the following article:
+
+**(( paper or report ))**
+
 <!---
 
 ```
