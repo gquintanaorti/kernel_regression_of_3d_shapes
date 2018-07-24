@@ -86,7 +86,7 @@ of a 3D shape in the shape space are offered:
   which is usually included in the R programming frameworks.
 
 In both cases, the following R packages can be very useful
-tgo visualize and save the obtained shapes:
+to visualize and save the obtained shapes:
 `scatterplot3d`, `shapes`, and `rgl`.
 
 Both variants can be found in the `mdl_kernel_regression_in_shape_space.R` file.
@@ -94,7 +94,7 @@ Both variants can be found in the `mdl_kernel_regression_in_shape_space.R` file.
 ### Details of the basic code:
 
 The header of the main method that implements the kernel regression
-of the basic code is the following one:
+is the following one:
 
 ```
 # =============================================================================
@@ -116,7 +116,7 @@ compute_kernel_regression_of_varset =
 ### Details of the accelerated code:
 
 The header of the main method that implements the kernel regression
-of the accelerated code is the following one:
+is the following one:
 
 ```
 # =============================================================================
