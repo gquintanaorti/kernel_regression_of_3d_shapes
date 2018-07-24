@@ -185,25 +185,22 @@ Both files must be stored in the `Data` directory.
 If those two files are stored in the `Data` directory, 
 the data contained in both of them can be loaded into main memory 
 with the following command:
-
 ```
 ds = read_dataset( "name" )
 ```
 
 Once the data is in main memory, the code supplied can process it.
 
-As an example, we show the two files that describe a very simple
+As an example, we show two files that describe a very simple
 dataset with two basic objects: two tetrahedrons.
 
 The contents of the `tetras1_coor.csv` file is the following:
-
 ```
 1;1;-0.5774;-0.4082;-1;-0.5774;-0.4082;0;1.1547;-0.4082;0;0;1.2247
 2;1;-0.5774;-1.633;-1;-0.5774;-1.633;0;1.1547;-1.633;0;0;4.899
 ```
 
 The contents of the `tetras1_vars.csv` file is the following:
-
 ```
 lineNumber;varX;varY;varZ
 1;1;1;1
