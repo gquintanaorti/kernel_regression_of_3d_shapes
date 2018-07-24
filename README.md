@@ -202,7 +202,8 @@ The contents of the `tetras1_coor.csv` file is the following:
 2;1;-0.5774;-1.633;-1;-0.5774;-1.633;0;1.1547;-1.633;0;0;4.899
 ```
 
-The contents of the `tetras1_vars.csv` file is the following:
+The contents of the `tetras1_vars.csv` file is the following
+(note the header in the first line):
 ```
 lineNumber;varX;varY;varZ
 1;1;1;1
@@ -225,6 +226,10 @@ It has the following landmarks:
 (-1, -0.5774, -1.633),
 (0, 1.1547, -1.633), and
 (0, 0, 4.899).
+
+The file with variables contain two sets of variables that define
+the two tetrahedrons. 
+The variables inside it define the scaling along each axis.
 
 The data contained in both files can be loaded into main memory 
 with the following command:
