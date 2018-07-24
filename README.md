@@ -187,8 +187,8 @@ ds = read_dataset( "name" )
 
 Once the data is in main memory, the code supplied can process it.
 
-As an example, we show the two files that describe a very basic 
-dataset con two objects: two tetrahedrons.
+As an example, we show the two files that describe a very simple
+dataset with two basic objects: two tetrahedrons.
 
 The contents of the `tetras1_coor.csv` file is the following:
 
