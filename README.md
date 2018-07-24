@@ -1,4 +1,4 @@
-# randUTV
+# Kernel Regression of 3D Shapes
 
 ## Authors
 
