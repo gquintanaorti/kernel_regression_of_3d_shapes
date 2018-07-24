@@ -37,7 +37,7 @@ WITHOUT ANY WARRANTY EXPRESSED OR IMPLIED.
 ## Description
 
 This code repository contains several implementations to compute 
-kernel regression of 3D shapes.
+kernel regression of 3D shapes in the shape space.
 Moreover, some related auxiliary code is supplied to read and process 
 datasets.
 
@@ -67,14 +67,14 @@ archivePrefix = "arXiv",
 
 ## Details of the code
 
-We offer two variants of the main code to compute the kernel regression
-of a 3D shape in the shape space:
+Two variants of the main code to compute the kernel regression
+of a 3D shape in the shape space are offered:
 
-* Basic code:
+* **Basic code**:
   It is written in the R programming language.
   It requires the `mvtnorm` R package.
 
-* Accelerated code:
+* **Accelerated code**:
   It is written in both the R and the C programming languages.
   This code uses R code and also some C code to accelerate the most 
   compute-intensive part of the process.
@@ -135,17 +135,17 @@ accel_compute_kernel_regression_of_varset =
 #
 ```
 
-To be able to use this accelerated code, you must do the following:
-
 The C code is embedded by using the `.Call` interface.
+
+To be able to use this accelerated code, you must do the following:
 
 1. Go to the `C_codes` directory.
 2. Clean the directory with the `cleanDirectory` command.
 3. Compile it with the `c` or the `compile` command.
    These are just scripts that compile the code 
    with the `R CMD SHLIB` command. 
-4. Copy the `compute_shape_in_C.so` file (a dynamic library) 
-   to the directory containing the R source code.
+4. Copy the `compute_shape_in_C.so` file (a dynamic library containing the
+   compiled code) into the directory containing the R source code.
 5. Open the R framework.
 6. Load the compiled C code (the dynamic library) 
    with the `dyn.load( "compute_shape_in_C.so" )` command.
@@ -159,8 +159,8 @@ The dataset must be stored in two files:
 * `name_coor.csv`: File containing coordinates.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then all the 
-  landmarks of the object. For every landmark, the x, y, and z coordinates 
-  must be stored.
+  landmarks of the object. 
+  For every landmark, the `x`, `y`, and `z` coordinates must be given.
   
 * `name_vars.csv`: File containing variables.
   Every line stores information about one object in the dataset.
@@ -172,8 +172,12 @@ The dataset must be stored in two files:
 Both files must be stored in the `Data` directory.
 
 If those two files are stored in the `Data` directory, 
-the data can be loaded into memory with the following command:
-`ds = read_dataset( "name" )`.
+the data contained in both of them can be loaded into main memory 
+with the following command:
+
+```
+ds = read_dataset( "name" )
+```.
 
 Once the data is in main memory, the code supplied can process it.
 
