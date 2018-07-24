@@ -47,9 +47,12 @@ We will appreciate feedback from the community on the use of this code.
 
 We ask those who benefit from this work to cite the following article:
 
-**(( paper or report ))**
+```
+To be updated soon.
+'''
 
 <!---
+**(( paper or report ))**
 
 ```
 @ARTICLE{(( To be fixed )),
