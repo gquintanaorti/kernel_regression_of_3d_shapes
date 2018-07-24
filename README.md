@@ -5,12 +5,12 @@
 * Gregorio Quintana-Orti,
   Depto. de Ingeniería y Ciencia de Computadores,
   Universitat Jaume I,
-  12.071 Castellon, Spain.
+  12.071 Castellón, Spain.
 
-* Amelia Simo,
+* Amelia Simó,
   Depto. de Matemáticas,
   Universitat Jaume I,
-  12.071 Castellon, Spain.
+  12.071 Castellón, Spain.
 
 ## Correspondence
 
