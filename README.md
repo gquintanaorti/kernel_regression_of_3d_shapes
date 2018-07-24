@@ -91,6 +91,11 @@ to visualize and save the obtained shapes:
 
 Both variants can be found in the `mdl_kernel_regression_in_shape_space.R` file.
 
+The code supplied do not require any installation if you just want 
+to use the basic code.
+If you want to use the accelerated code, a basic installation is required.
+It is described below.
+
 ### Details of the basic code:
 
 The header of the main method that implements the kernel regression
