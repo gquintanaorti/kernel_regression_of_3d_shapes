@@ -240,9 +240,10 @@ ds = read_dataset( "tetras1" )
 Once loaded the data in the files into the data structure `dset`,
 it can be used as an argument to those methods that require a dataset.
 
-### Brief description of the contents of the programming modules:
+### Summary of the R programming modules:
 
-The code supplied in this repository includes the following modules:
+The code supplied in this repository includes the following modules
+with R code:
 
 * `mdl_load_all_modules.R` :
   It removes all the code and reloads all the modules.
