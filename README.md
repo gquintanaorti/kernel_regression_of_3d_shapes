@@ -145,6 +145,8 @@ accel_compute_kernel_regression_of_varset =
 ```
 
 The C code is embedded by using the `.Call` interface.
+It works fine in Linux machines, but we have experienced some problems 
+with this interface on Windows machines.
 
 To be able to use this accelerated code, you must do the following:
 
@@ -246,7 +248,8 @@ The code supplied in this repository includes the following modules
 with R code:
 
 * `mdl_load_all_modules.R` :
-  It removes all the code and reloads all the modules.
+  It removes all the code and 
+  then reloads all the modules containing R source code.
 
 * `mdl_read_dataset.R` :
   It reads the two files described above and load the data into a new dataset
