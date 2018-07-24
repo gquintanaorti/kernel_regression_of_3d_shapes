@@ -154,7 +154,7 @@ To be able to use this accelerated code, you must do the following:
 6. Load the compiled C code (the dynamic library) 
    with the `dyn.load( "compute_shape_in_C.so" )` command.
 
-### Details of the dataset format
+### Details of the dataset format:
 
 A method to load (read) a dataset 
 from secondary storage (two files) is supplied.
@@ -165,13 +165,15 @@ The dataset must be stored in two files:
   Every line in the file contains the line number and then all the 
   landmarks of the object. 
   For every landmark, the `x`, `y`, and `z` coordinates must be given.
+  This file does not require a header line 
+  since the number of columns in this file is usually large.
   
 * `name_vars.csv`: File containing variables.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then the values 
   of the variables for this object.
-  Since the number of columns in this file is usually small, 
-  this file requires a header line.
+  This file requires a header line 
+  since the number of columns in this file is usually small. 
 
 Both files must be stored in the `Data` directory.
 
