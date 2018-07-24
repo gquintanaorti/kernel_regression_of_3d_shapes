@@ -85,8 +85,9 @@ of a 3D shape in the shape space are offered:
   (Basic Linear Algebra Subroutines) library, 
   which is usually included in the R programming frameworks.
 
-In both cases, the `scatterplot3d`, `shapes`, and `rgl` R packages can be very 
-useful to visualize the obtained shapes.
+In both cases, the following R packages can be very useful
+tgo visualize and save the obtained shapes:
+`scatterplot3d`, `shapes`, and `rgl`.
 
 Both variants can be found in the `mdl_kernel_regression_in_shape_space.R` file.
 
