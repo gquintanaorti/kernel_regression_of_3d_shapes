@@ -237,3 +237,51 @@ with the following command:
 ds = read_dataset( "tetras1" )
 ```
 
+Once loaded the data in the files into the data structure `dset`,
+it can be used as an argument to those methods that require a dataset.
+
+### Brief description of the contents of the programming modules:
+
+The code supplied in this repository includes the following modules:
+
+* `mdl_load_all_modules.R` :
+  It removes all the code and reloads all the modules.
+
+* `mdl_read_dataset.R` :
+  It reads the two files described above and load the data into a new dataset
+  (a new data structure) that can be sent to many methods.
+
+* `mdl_dataset_utils.R` :
+  It includes several useful functions to process datasets:
+  print the dataset dimensions, 
+  randomly reorder the dataset,
+  reduce the number of objects,
+  reduce the resolution (number of landmarks),
+  etc.
+
+* `mdl_generate_new_dataset_with_houses.R` :
+  It builds and stores a new dataset with houses. 
+  The arguments allow to change some parameters.
+  The source code can be easily modified to change some other parameters.
+
+* `mdl_kernel_regression_in_shape_space.R` :
+  It contains the two main methods to compute kernel regressions of 3D shapes
+  in the shape space.
+  Furthermore, it contains several auxiliary methods 
+  used by these two main methods.
+
+* `mdl_my_new_preshape.R` :
+  It contains several modifications of some functions provided by the
+  noteworthy `shapes` R package by Ian L. Dryden. These new implementations 
+  have been accelerated and are much faster for medium and large datasets 
+  than the original codes.
+
+* `mdl_cross_validation.R` :
+  It contains code to perform a cross validation.
+
+* `mdl_distances.R` :
+  It contains some code to compute Riemannian distances.
+
+* `mdl_tests.R` :
+  It contains a test to compare the basic code and the accelerated code.
+
