@@ -191,6 +191,8 @@ ds = read_dataset( "name" )
 
 Once the data is in main memory, the code supplied can process it.
 
+#### An example of a basic dataset:
+
 As an example, we show two files that describe a very simple
 dataset with two basic objects: two tetrahedrons.
 
@@ -224,4 +226,9 @@ It has the following landmarks:
 (0, 1.1547, -1.633), and
 (0, 0, 4.899).
 
+The data contained in both files can be loaded into main memory 
+with the following command:
+```
+ds = read_dataset( "tetras1" )
+```
 
