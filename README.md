@@ -38,8 +38,8 @@ WITHOUT ANY WARRANTY EXPRESSED OR IMPLIED.
 
 This code repository contains several implementations to compute 
 kernel regression of 3D shapes in the shape space.
-Moreover, some related auxiliary code is supplied to read and process 
-datasets.
+Some related auxiliary code is supplied to read and process datasets.
+Besides, more code is given to perform some advanced processing.
 
 We will appreciate feedback from the community on the use of this code.
 
