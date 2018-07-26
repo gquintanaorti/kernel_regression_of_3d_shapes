@@ -311,7 +311,7 @@ The lines in the above code sample perform the following:
 * The second line loads the dataset provided with the houses.
 * The third line defines a set of variables (varset) for the prediction.
 * The fourth line computes the prediction of the previous varset 
-  with up to 10000 iterations.
+  with up to 1000 iterations.
 * The fifth line visualizes the predicted object.
 * To run this line,
 * you need to install at least `scatterplot3d` and `rgl` R packages.
