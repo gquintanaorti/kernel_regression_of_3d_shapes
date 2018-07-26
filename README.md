@@ -293,3 +293,17 @@ with R code:
 * `mdl_tests.R` :
   It contains a test to compare the basic code and the accelerated code.
 
+#### How to use the code. A basic example:
+
+Next we show how to use the code to predict the shape of a house.
+To run the last line in order to visualize the predicted shape,
+you need to install at least `scatterplot3d` and `rgl` R packages.
+
+```
+source( "mdl_load_all_modules.R" ) 
+ds = read_dataset( "houses1" )
+varset = c( 10, 10, 15 )
+shape = compute_kernel_regression_of_varset( ds, 1000, varset )
+plot3d( shape, aspect = F )
+```
+
