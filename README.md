@@ -313,6 +313,6 @@ The lines in the above code sample perform the following:
 * The fourth line computes the prediction of the previous varset 
   with up to 1000 iterations.
 * The fifth line visualizes the predicted object.
-* To run this line,
-* you need to install at least `scatterplot3d` and `rgl` R packages.
+  To run this line, 
+  you need to install at least `scatterplot3d` and `rgl` R packages.
 
