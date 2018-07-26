@@ -296,8 +296,17 @@ with R code:
 ### How to use the code. A basic example:
 
 Next we show how to use the code to predict the shape of a house.
-To run the last line in order to visualize the predicted shape,
-you need to install at least `scatterplot3d` and `rgl` R packages.
+Those lines in the code sample perform the following:
+
+* The first line loads the codes to run the basic prediction.
+* The second line loads the dataset provided with the houses.
+* The third line defines a set of variables (varset) for the prediction.
+* The fourth line computes the prediction.
+* The fifth line visualizes the predicted object.
+* To run this line,
+* you need to install at least `scatterplot3d` and `rgl` R packages.
+
+This is the basic code sample:
 
 ```
 source( "mdl_load_all_modules.R" ) 
