@@ -293,7 +293,7 @@ with R code:
 * `mdl_tests.R` :
   It contains a test to compare the basic code and the accelerated code.
 
-#### How to use the code. A basic example:
+### How to use the code. A basic example:
 
 Next we show how to use the code to predict the shape of a house.
 To run the last line in order to visualize the predicted shape,
