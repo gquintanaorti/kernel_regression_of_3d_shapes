@@ -295,18 +295,7 @@ with R code:
 
 ### How to use the code. A basic example:
 
-Next we show how to use the code to predict the shape of a house.
-Those lines in the code sample perform the following:
-
-* The first line loads the codes to run the basic prediction.
-* The second line loads the dataset provided with the houses.
-* The third line defines a set of variables (varset) for the prediction.
-* The fourth line computes the prediction.
-* The fifth line visualizes the predicted object.
-* To run this line,
-* you need to install at least `scatterplot3d` and `rgl` R packages.
-
-This is the basic code sample:
+Next we show how to use the code to predict the shape of a house:
 
 ```
 source( "mdl_load_all_modules.R" ) 
@@ -315,4 +304,15 @@ varset = c( 10, 10, 15 )
 shape = compute_kernel_regression_of_varset( ds, 1000, varset )
 plot3d( shape, aspect = F )
 ```
+
+The lines in the above code sample perform the following:
+
+* The first line loads the codes to run the basic prediction.
+* The second line loads the dataset provided with the houses.
+* The third line defines a set of variables (varset) for the prediction.
+* The fourth line computes the prediction of the previous varset 
+  with up to 10000 iterations.
+* The fifth line visualizes the predicted object.
+* To run this line,
+* you need to install at least `scatterplot3d` and `rgl` R packages.
 
