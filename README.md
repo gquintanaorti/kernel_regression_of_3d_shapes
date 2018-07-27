@@ -75,16 +75,16 @@ archivePrefix = "arXiv",
 
 This code repository contains three directories:
 
-* `R_source_codes':
+* Directory `R_source_codes':
   It contains the main code.
   You need to download the contents of this directory to be able to work.
 
-* `C_source_codes':
+* Directory `C_source_codes':
   It contains some auxiliary code written in the C programming language 
   to accelerate some parts of the R source codes.
   The downloading and installation of this directory is optional.
 
-* `Data':
+* Directory `Data':
   It contains some datasets employed in the paper.
   It includes the `house1` dataset employed in the simulation study.
   Besides, it includes a basic sample dataset called `tetras1'.
