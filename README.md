@@ -86,8 +86,8 @@ This code repository contains three directories:
 
 * `Data`:
   It contains some datasets employed in the paper.
-  It includes the `house1' dataset employed in the simulation study.
-  Besides, it includes a basic sample dataset called `tetras1'.
+  It includes the `house1` dataset employed in the simulation study.
+  Besides, it includes a basic sample dataset called `tetras1`.
 
 Two variants of the main code to compute the kernel regression
 of a 3D shape in the shape space are offered:
