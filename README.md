@@ -25,7 +25,7 @@ Amelia Simó: <simo@mat.uji.es>
 The license for this code is:
 GNU Affero General Public License v3.0.
 
-See the `LICENSE.txt` file for more details.
+Read the `LICENSE.txt` file for more details.
 
 ## Disclaimer
 
@@ -75,16 +75,16 @@ archivePrefix = "arXiv",
 
 This code repository contains three directories:
 
-* **R_source_codes**:
+* `R_source_codes':
   It contains the main code.
   You need to download the contents of this directory to be able to work.
 
-* **C_source_codes**:
+* `C_source_codes':
   It contains some auxiliary code written in the C programming language 
   to accelerate some parts of the R source codes.
   The downloading and installation of this directory is optional.
 
-* **Data**:
+* `Data':
   It contains some datasets employed in the paper.
   It includes the `house1` dataset employed in the simulation study.
   Besides, it includes a basic sample dataset called `tetras1'.
@@ -316,13 +316,13 @@ with R code:
 * `mdl_tests.R` :
   It contains a test to compare the basic code and the accelerated code.
 
-### How to use the code. A basic example:
+### A basic example of how to use the code:
 
 Next we show how to use the code to predict the shape of a house:
 
 ```
 source( "mdl_load_all_modules.R" ) 
-ds = read_dataset( "houses1" )
+ds = read_dataset( "houses_001" )
 varset = c( 10, 10, 15 )
 shape = compute_kernel_regression_of_varset( ds, 1000, varset )
 plot3d( shape, aspect = F )
