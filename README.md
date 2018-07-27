@@ -86,7 +86,7 @@ This code repository contains three directories:
 
 * Directory `Data':
   It contains some datasets employed in the paper.
-  It includes the `house1` dataset employed in the simulation study.
+  It includes the `house1' dataset employed in the simulation study.
   Besides, it includes a basic sample dataset called `tetras1'.
 
 Two variants of the main code to compute the kernel regression
