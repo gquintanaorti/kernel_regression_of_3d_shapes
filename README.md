@@ -27,7 +27,6 @@ Amelia Simó: <simo@mat.uji.es>
 (( See file License.txt for more details. ))
 -->
 
-Free for non-commercial purposes.
 
 ## Disclaimer
 
@@ -37,9 +36,9 @@ WITHOUT ANY WARRANTY EXPRESSED OR IMPLIED.
 ## Description
 
 This code repository contains several implementations to compute 
-kernel regression of 3D shapes in the shape space.
-Some related auxiliary code is supplied to read and process datasets.
-Besides, more code is given to perform some advanced processing.
+the kernel regression of 3D shapes in the shape space.
+Some related auxiliary code is supplied to read and process datasets,
+and to perform some advanced processing.
 
 We will appreciate feedback from the community on the use of this code.
 
@@ -49,7 +48,8 @@ We ask those who benefit from this work to cite the following article:
 
 ```
 To be updated soon.
-Contact the authors if you want to reference and no paper is given.
+Contact the authors if you want to reference this work and 
+no paper is shown yet.
 ```
 
 <!---
@@ -74,6 +74,22 @@ archivePrefix = "arXiv",
 
 ## Details of the code
 
+This code repository contains three directories:
+
+* `R_source_codes':
+  It contains the main code.
+  You need to download the contents of this directory to be able to work.
+
+* `C_source_codes':
+  It contains some auxiliary code written in the C programming language 
+  to accelerate some parts of the R source codes.
+  The downloading and installation of this directory is optional.
+
+* `Data':
+  It contains some datasets employed in the paper.
+  It includes the `house1` dataset employed in the simulation study.
+  Besides, it includes a basic sample dataset called `tetras1'.
+
 Two variants of the main code to compute the kernel regression
 of a 3D shape in the shape space are offered:
 
@@ -83,17 +99,18 @@ of a 3D shape in the shape space are offered:
 
 * **Accelerated code**:
   It is written in both the R and the C programming languages.
-  This code uses R code and also some C code to accelerate the most 
-  compute-intensive part of the process.
+  This code uses R code to perform the basic work, and then 
+  some C code to accelerate the most compute-intensive part of the process.
   It requires the `mvtnorm` R package and a high-performance `BLAS`
   (Basic Linear Algebra Subroutines) library, 
   which is usually included in the R programming frameworks.
 
 In both cases, the following R packages can be very useful
 to visualize and save the obtained shapes:
-`scatterplot3d`, `shapes`, and `rgl`.
+`scatterplot3d`, and `rgl`.
 
-Both variants can be found in the `mdl_kernel_regression_in_shape_space.R` file.
+Both variants can be found 
+in the `mdl_kernel_regression_in_shape_space.R` file.
 
 The code supplied do not require any installation if you just want 
 to use the basic code.
@@ -148,17 +165,17 @@ accel_compute_kernel_regression_of_varset =
 #
 ```
 
-The C code is embedded by using the `.Call` interface.
+The C code is embedded inside the R code by using the `.Call` interface.
 It works fine in Linux machines, but we have experienced some problems 
-with this interface on Windows machines.
+with this interface on some Windows machines.
 
 To be able to use this accelerated code, you must do the following:
 
-1. Go to the `C_codes` directory.
+1. Go to the `C_source_codes` directory.
 2. Clean the directory with the `cleanDirectory` command.
-3. Compile it with the `c` or the `compile` command.
+3. Compile it with the `c` command or the `compile` command.
    These are just scripts that compile the code 
-   with the `R CMD SHLIB` command. 
+   with the `R CMD SHLIB` command from R.
 4. Copy the `compute_shape_in_C.so` file (a dynamic library containing the
    compiled code) into the directory containing the R source code.
 5. Open the R framework.
@@ -168,10 +185,11 @@ To be able to use this accelerated code, you must do the following:
 ### Details of the dataset format:
 
 A method to load (read) a dataset 
-from secondary storage (two files) is supplied.
-The dataset must be stored in two files:
+from secondary storage is supplied.
+The dataset must be partitioned and stored in two files:
 
-* `name_coor.csv`: File containing coordinates.
+* `*name*_coor.csv`: 
+  This file contains all the landmarks (coordinates) of the objects.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then all the 
   landmarks of the object. 
@@ -179,7 +197,8 @@ The dataset must be stored in two files:
   This file does not require a header line 
   since the number of columns in this file is usually large.
   
-* `name_vars.csv`: File containing variables.
+* `*name*_vars.csv`: 
+  This file contains the variables for the objects.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then the values 
   of the variables for this object.
@@ -199,24 +218,33 @@ Once the data is in main memory, the code supplied can process it.
 
 #### An example of a basic dataset:
 
-As an example, we show two files that describe a very simple
-dataset with two basic objects: two tetrahedrons.
+As an example, we show the contents of two files 
+that describe a very simple dataset with two basic objects: 
+two tetrahedrons.
+Next we show the contents of the two files:
 
-The contents of the `tetras1_coor.csv` file is the following:
-```
-1;1;-0.5774;-0.4082;-1;-0.5774;-0.4082;0;1.1547;-0.4082;0;0;1.2247
-2;1;-0.5774;-1.633;-1;-0.5774;-1.633;0;1.1547;-1.633;0;0;4.899
-```
+* Contents of the `tetras1_coor.csv` file:
+  The first column is the line number, and the rest of the columns 
+  contain the landmarks of the tetrahedrons.
+  The contents is the following:
+  ```
+  1;1;-0.5774;-0.4082;-1;-0.5774;-0.4082;0;1.1547;-0.4082;0;0;1.2247
+  2;1;-0.5774;-1.633;-1;-0.5774;-1.633;0;1.1547;-1.633;0;0;4.899
+  ```
 
-The contents of the `tetras1_vars.csv` file is the following
-(note the header in the first line):
-```
-lineNumber;varX;varY;varZ
-1;1;1;1
-2;1;1;4
-```
+* Contents of the `tetras1_vars.csv` file: 
+  The first column is the line number, and the rest of the columns 
+  contain a set of variables for each object.
+  In this case, the variables inside it define the scaling along each axis.
+  The contents is the following
+  (note the header in the first line):
+  ```
+  lineNumber;varX;varY;varZ
+  1;1;1;1
+  2;1;1;4
+  ```
 
-These two files describe two tetrahedrons: 
+These two files combined describe two tetrahedrons: 
 
 * The first one has edge lengths approximately equal to 2 and its base 
 is parallel to the XY plane.
@@ -233,17 +261,13 @@ It has the following landmarks:
 (0, 1.1547, -1.633), and
 (0, 0, 4.899).
 
-The file with variables contain two sets of variables that define
-the two tetrahedrons. 
-The variables inside it define the scaling along each axis.
-
 The data contained in both files can be loaded into main memory 
 with the following command:
 ```
 ds = read_dataset( "tetras1" )
 ```
 
-Once loaded the data in the files into the data structure `dset`,
+Once loaded the data in the files into the data structure `ds`,
 it can be used as an argument to those methods that require a dataset.
 
 ### Summary of the R programming modules:
