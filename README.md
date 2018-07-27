@@ -22,11 +22,10 @@ Amelia Simó: <simo@mat.uji.es>
 
 ## License
 
-<!---
-(( New 3-clause BSD. ))
-(( See file License.txt for more details. ))
--->
+The license for this code is:
+GNU Affero General Public License v3.0.
 
+See file LICENSE.txt for more details.
 
 ## Disclaimer
 
