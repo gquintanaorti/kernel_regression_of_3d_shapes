@@ -1,0 +1,1 @@
+R CMD SHLIB compute_shape_in_C.c
