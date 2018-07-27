@@ -187,7 +187,7 @@ A method to load (read) a dataset
 from secondary storage is supplied.
 The dataset must be partitioned and stored in two files:
 
-* `*name*_coor.csv`: 
+* `name_coor.csv`: 
   This file contains all the landmarks (coordinates) of the objects.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then all the 
@@ -196,7 +196,7 @@ The dataset must be partitioned and stored in two files:
   This file does not require a header line 
   since the number of columns in this file is usually large.
   
-* `*name*_vars.csv`: 
+* `name_vars.csv`: 
   This file contains the variables for the objects.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then the values 
