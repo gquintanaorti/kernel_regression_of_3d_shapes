@@ -25,7 +25,7 @@ Amelia Simó: <simo@mat.uji.es>
 The license for this code is:
 GNU Affero General Public License v3.0.
 
-See file LICENSE.txt for more details.
+See the `LICENSE.txt` file for more details.
 
 ## Disclaimer
 
