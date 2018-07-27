@@ -331,7 +331,7 @@ Next we show how to use the code to predict the shape of a house:
 
 ```
 source( "mdl_load_all_modules.R" ) 
-ds = read_dataset( "houses_001" )
+ds = read_dataset( "houses_e001" )
 varset = c( 10, 10, 15 )
 shape = compute_kernel_regression_of_varset( ds, 1000, varset )
 plot3d( shape, aspect = F )
