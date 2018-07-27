@@ -101,8 +101,8 @@ This code repository contains three directories:
   It includes two dataset of houses employed in the simulation study:
   Dataset of houses with an error of 0.01, and
   dataset of houses with an error of 0.05.
-  The only difference of these dataset with the actual ones 
-  could be derived from the initial seeds for the random number generators.
+  These datasets could be different when generated again because of the
+  values of the initial seeds for the random number generators.
 
 Two variants of the main code to compute the kernel regression
 of a 3D shape in the shape space are offered:
