@@ -28,8 +28,8 @@ GNU Affero General Public License v3.0.
 Read the `LICENSE.txt` file for more details.
 
 The `mdl_my_new_preshape.R` module of this repository
-contains some modifications of several routines of the `shapes` R package 
-by Ian L. Dryden.
+contains some modifications of several routines of the 
+noteworthy `shapes` R package by Ian L. Dryden.
 These methods have been rewritten to accelerate them 
 on medium and large datasets.
 License GPL-2 should be applied to this code too.
@@ -115,7 +115,7 @@ of a 3D shape in the shape space are offered:
 
 In both cases, the following R packages can be very useful
 to visualize and save the obtained shapes:
-`scatterplot3d`, and `rgl`.
+`scatterplot3d` and `rgl`.
 
 Both variants can be found 
 in the `mdl_kernel_regression_in_shape_space.R` file.
@@ -196,7 +196,7 @@ A method to load (read) a dataset
 from secondary storage is supplied.
 The dataset must be partitioned and stored in two files:
 
-* `name_coor.csv`: 
+* File `name_coor.csv`: 
   This file contains all the landmarks (coordinates) of the objects.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then all the 
@@ -205,7 +205,7 @@ The dataset must be partitioned and stored in two files:
   This file does not require a header line 
   since the number of columns in this file is usually large.
   
-* `name_vars.csv`: 
+* File `name_vars.csv`: 
   This file contains the variables for the objects.
   Every line stores information about one object in the dataset.
   Every line in the file contains the line number and then the values 
@@ -312,7 +312,7 @@ with R code:
 
 * `mdl_my_new_preshape.R` :
   It contains several modifications of some functions provided by the
-  noteworthy `shapes` R package by Ian L. Dryden. These new implementations 
+  `shapes` R package by Ian L. Dryden. These new implementations 
   have been accelerated and are much faster for medium and large datasets 
   than the original codes.
 
