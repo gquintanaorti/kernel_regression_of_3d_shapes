@@ -27,6 +27,13 @@ GNU Affero General Public License v3.0.
 
 Read the `LICENSE.txt` file for more details.
 
+The `mdl_my_new_preshape.R` module of this repository
+contains some modifications of several routines of the `shapes` R package 
+by Ian L. Dryden.
+These methods have been rewritten to accelerate them 
+on medium and large datasets.
+License GPL-2 should be applied to this code too.
+
 ## Disclaimer
 
 This code is distributed in the hope that it will be useful, but
@@ -86,7 +93,9 @@ This code repository contains three directories:
 
 * Directory `Data`:
   It contains some datasets employed in the paper.
-  It includes the `house1` dataset employed in the simulation study.
+  It includes two dataset of houses employed in the simulation study:
+  Dataset of houses with an error of 0.01, and
+  dataset of houses with an error of 0.05.
   Besides, it includes a basic sample dataset called `tetras1`.
 
 Two variants of the main code to compute the kernel regression
@@ -222,7 +231,7 @@ that describe a very simple dataset with two basic objects:
 two tetrahedrons.
 Next we show the contents of the two files:
 
-* Contents of the `tetras1_coor.csv` file:
+* File `tetras1_coor.csv`:
   The first column is the line number, and the rest of the columns 
   contain the landmarks of the tetrahedrons.
   The contents is the following:
@@ -231,7 +240,7 @@ Next we show the contents of the two files:
   2;1;-0.5774;-1.633;-1;-0.5774;-1.633;0;1.1547;-1.633;0;0;4.899
   ```
 
-* Contents of the `tetras1_vars.csv` file: 
+* File `tetras1_vars.csv`:
   The first column is the line number, and the rest of the columns 
   contain a set of variables for each object.
   In this case, the variables inside it define the scaling along each axis.
@@ -280,7 +289,7 @@ with R code:
 
 * `mdl_read_dataset.R` :
   It reads the two files described above and load the data into a new dataset
-  (a new data structure) that can be sent to many methods.
+  (a new data structure) that can be used by many methods.
 
 * `mdl_dataset_utils.R` :
   It includes several useful functions to process datasets:
