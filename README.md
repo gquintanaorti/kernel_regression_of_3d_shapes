@@ -46,6 +46,10 @@ the kernel regression of 3D shapes in the shape space.
 Some related auxiliary code is supplied to read and process datasets,
 and to perform some advanced processing.
 
+The code provided is written in the R programming language.
+Some other code written in the C programming language is provided to
+optionally accelerate the most compute-intensive part.
+
 We will appreciate feedback from the community on the use of this code.
 
 ## Citing this work
