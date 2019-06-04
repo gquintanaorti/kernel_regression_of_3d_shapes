@@ -307,9 +307,9 @@ with R code:
   For instance, on a dataset with about 3000 landmarks, the new codes
   are about between 100 and 650 times faster, depending on the computer
   and version of the R interpreter.
-  This file might not be necessary in the future
+  The optimizations in this file might not be necessary in the future
   because the `shapes` R package will include the accelerated functions 
-  in it in about late summer 2019.
+  in it in about late summer 2019. However, the names of the routines could change.
 
 * `mdl_cross_validation.R` :
   It contains code to perform a cross validation.
