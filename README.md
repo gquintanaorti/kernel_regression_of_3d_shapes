@@ -321,9 +321,9 @@ with R code:
   `shapes` R package by Ian L. Dryden. These new implementations 
   have been accelerated and are much faster for medium and large datasets 
   than the original codes.
-  This file could not be needed 
+  This file might not be necessary in the future
   because the `shapes' R package will include the accelerated functions 
-  in this file in late summer 2019.
+  in it in about late summer 2019.
 
 * `mdl_cross_validation.R` :
   It contains code to perform a cross validation.
