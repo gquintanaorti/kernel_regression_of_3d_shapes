@@ -319,8 +319,11 @@ with R code:
 * `mdl_my_new_preshape.R` :
   It contains several modifications of some functions provided by the
   `shapes` R package by Ian L. Dryden. These new implementations 
-  have been accelerated and are much faster for medium and large datasets 
-  than the original codes.
+  have been optimized for performance and are much faster for 
+  medium and large datasets than the original codes. 
+  For instance, on a dataset with about 3000 landmarks, the new codes
+  are about between 100 and 650 times faster, depending on the computer
+  and version of the R interpreter.
   This file might not be necessary in the future
   because the `shapes` R package will include the accelerated functions 
   in it in about late summer 2019.
