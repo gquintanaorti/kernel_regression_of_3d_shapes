@@ -57,30 +57,13 @@ We will appreciate feedback from the community on the use of this code.
 We ask those who benefit from this work to cite the following article:
 
 ```
-To be updated soon.
-Contact the authors if you want to reference this work and 
-no paper is shown yet.
-```
+G. Quintana-Ortí and A. Simó.
+"A kernel regression procedure in the 3D shape space with an
+application to online sales of children's wear".
+Statistical Science, (accepted and in press), 2019.
 
-<!---
-**(( paper or report ))**
-
+Contact the authors if you need the full reference.
 ```
-@ARTICLE{(( To be fixed )),
-   author = {xxx },
-    title = "{yyy}",
-  journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
-   eprint = {xxx1703.00998},
- primaryClass = "math.NA",
- keywords = {xxx - Mathematics - Numerical Analysis},
-     year = 2018,
-    month = jul,
-   adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170300998M},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-```
--->
 
 ## Details of the code
 
