@@ -309,8 +309,10 @@ with R code:
   and version of the R interpreter.
   The optimizations in this file might not be necessary in the future
   because the `shapes` R package will include the accelerated functions 
-  in it in about late summer 2019. However, the names of the routines could change.
-
+  in it in about late summer 2019. 
+  The new functions contain the preffix `my_`. However, the final names 
+  of the functions inside `shapes`is yet to be decided.
+  
 * `mdl_cross_validation.R` :
   It contains code to perform a cross validation.
 
