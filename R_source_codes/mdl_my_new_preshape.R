@@ -79,8 +79,8 @@ my_preshape = function( x ) {
             #### h <- my_defh(k - 1)
             #### ztem <- h %*% x
 
-            # Use of multiply_by_helmert_implicitely to accelerate the code.
-            ztem <- multiply_by_helmert_implicitely( x )
+            # Use of multiply_by_helmert_implicitly to accelerate the code.
+            ztem <- multiply_by_helmert_implicitly( x )
 
             size <- my_centroid.size(x)
             z <- ztem/size
@@ -127,8 +127,8 @@ my_centroid.size = function( x ) {
             #### h <- my_defh(k - 1)
             #### xh <- h %*% x
 
-            # Use of multiply_by_helmert_implicitely to accelerate the code.
-            xh <- multiply_by_helmert_implicitely( x )
+            # Use of multiply_by_helmert_implicitly to accelerate the code.
+            xh <- multiply_by_helmert_implicitly( x )
 
             size <- sqrt(sum(diag(t(xh) %*% xh)))
             size
@@ -158,7 +158,7 @@ my_defh = function( nrow ) {
 }
 
 # =============================================================================
-multiply_by_helmert_implicitely = function( x ) {
+multiply_by_helmert_implicitly = function( x ) {
 #
 # This code multiplies the "x" argument by the Helmert matrix of the 
 # corresponding size.
