@@ -59,7 +59,8 @@ We ask those who benefit from this work to cite the following article:
 ```
 @ARTICLE{QuiSim2019,
     AUTHOR = {Gregorio Quintana-Ort\'{\i} and Amelia Sim\'o},
-     TITLE = {A Kernel Regression Procedure in the 3D Shape Space with an Application to Online Sales of Children's Wear},
+     TITLE = {A Kernel Regression Procedure in the 3D Shape Space 
+              with an Application to Online Sales of Children's Wear},
    JOURNAL = {Statist. Sci.},
   FJOURNAL = {Statistical Science},
       YEAR = {2019},
