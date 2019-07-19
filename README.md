@@ -57,12 +57,19 @@ We will appreciate feedback from the community on the use of this code.
 We ask those who benefit from this work to cite the following article:
 
 ```
-G. Quintana-Ortí and A. Simó.
-"A kernel regression procedure in the 3D shape space with an
-application to online sales of children's wear".
-Statistical Science, (accepted and in press), 2019.
-
-Contact the authors if you need the full reference.
+@ARTICLE{QuiSim2019,
+    AUTHOR = {Gregorio Quintana-Ort\'{\i} and Amelia Sim\'o},
+     TITLE = {A Kernel Regression Procedure in the 3D Shape Space with an Application to Online Sales of Children's Wear},
+   JOURNAL = {Statist. Sci.},
+  FJOURNAL = {Statistical Science},
+      YEAR = {2019},
+    VOLUME = {34},
+    NUMBER = {2},
+     PAGES = {236-252},
+      ISSN = {0883-4237},
+       DOI = {10.1214/18-STS675},
+      SICI = {0883-4237(2019)34:2<236:AKRPIT>2.0.CO;2-Q},
+}
 ```
 
 ## Details of the code
